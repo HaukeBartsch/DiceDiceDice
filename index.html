@@ -16,10 +16,10 @@
         <main>
             <div class="row">
                 <div style="margin-top: 20px; font-size: 24px;">
-                    2 x <span class="badge rounded-pill text-bg-primary" id="common">0</span>
-                    / (<span class="badge rounded-pill text-bg-primary" id="side1">0</span> + <span class="badge rounded-pill text-bg-primary" id="side2">0</span>) 
+                    2 x <span class="badge rounded-pill text-bg-primary" id="common" title="number of overlapping tiles">0</span>
+                    / (<span class="badge rounded-pill text-bg-primary" id="side1" title="number of human masks">0</span> + <span class="badge rounded-pill text-bg-primary" id="side2" title="number of what would be AI tiles">0</span>) 
                     =
-                    <span class="badge rounded-pill text-bg-success" id="dice">0</span>
+                    <span class="badge rounded-pill text-bg-success" id="dice" title="calculated dice score">0</span>
                 </div>
             </div>
             <div class="row">
@@ -27,13 +27,14 @@
                 <div class="col-md-6">
                     <p>Models for image segmentation learn by example. A target mask (dark tiles) comes from a human expert. Use your mouse to draw, left-mouse human mask, right-mouse AI mask.</p> 
                     <p>A deep neural network learns by improving the overlap of its own estimated mask with the human generated mask.</p>
-                    <p>At each learning step the overlap is improved (dice score). A dice score of 1 means a perfect match, at 0 we have a no overlap.</p>
+                    <p>At each learning step the overlap is improved. Here we measure the overlap using Dice's coefficient. A Dice score of 1 means a perfect match, at 0 we have a no overlap.</p>
                     <p>
                       <ul>
                         <li>How do errors depend on the size of a region?</li>
                         <li>How does the overlap work with more than one region?</li>
                         <li>Is there more than one way to get an 'ok' dice score of 0.86?</li>
                       </ul>
+                      More information about Dice's coefficient can be found following the link to <a href="https://en.wikipedia.org/wiki/Dice-Sørensen_coefficient">Wikipedia</a>.
                     </p>
                 </div>
             </div>
