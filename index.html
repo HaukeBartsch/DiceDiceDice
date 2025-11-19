@@ -16,22 +16,24 @@
         <main>
             <div class="row">
                 <div style="margin-top: 20px; font-size: 24px;">
-                    2 * <span class="badge rounded-pill text-bg-primary" id="common">0</span>
+                    2 x <span class="badge rounded-pill text-bg-primary" id="common">0</span>
                     / (<span class="badge rounded-pill text-bg-primary" id="side1">0</span> + <span class="badge rounded-pill text-bg-primary" id="side2">0</span>) 
                     =
                     <span class="badge rounded-pill text-bg-success" id="dice">0</span>
                 </div>
-                <div class="form-control" id="grid"></div>
             </div>
             <div class="row">
-                <div class="col">
-                <div style="margin-top: 20px;" class="col-6">
-                    <div class="mb-3">
-                        <label for="target" class="form-label">Target dice score</label>
-                        <input type="number" class="form-control" id="target" aria-describedby="targetHelp" placeholder="0.86">
-                        <div id="targetHelp" class="form-text">Specify a target dice score you would like to reach.</div>
+                <div class="col" id="grid"></div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div style="margin-top: 20px;">
+                        <div class="mb-3">
+                            <label for="target" class="form-label">Target dice score [0..1]</label>
+                            <input type="number" class="form-control" id="target" aria-describedby="targetHelp" placeholder="0.86">
+                            <div id="targetHelp" class="form-text">Specify a target dice score you would like to reach (automation).</div>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="col">
                     <div class="text-center" id="spinner">
@@ -41,7 +43,7 @@
             </div>
         </main>
         <footer class="d-flex justify-content-center py-3">
-            <p>Click to mask, Shift-Click to detect</p>
+            <p>Click to mask, Shift-Click (or right-mouse click) to detect. &nbsp;&nbsp;&nbsp;&nbsp;</p>
             <p>&copy; 2025 Dice score</p> 
         </footer>
     </div>
