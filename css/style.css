@@ -1,0 +1,35 @@
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    margin: 1px;
+}
+
+.cell.mask {
+    border: 1px solid white;
+    background-color: gray;
+}
+
+.cell.detected::after {
+    content: '⚉';
+    color: orange;
+    font-size: 44px;
+    line-height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    text-shadow: 0 0 4 white;
+}
+
+.cellrow {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 40px;
+}
+
+#grid {
+    margin-top: 10px;
+}

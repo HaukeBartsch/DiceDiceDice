@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dice</title>
+    <meta name="description" content="Dice computation" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dice Score</h1>
+        </header>
+        <main>
+            <div class="row">
+                <div style="margin-top: 20px; font-size: 24px;">
+                    2 * <span class="badge rounded-pill text-bg-primary" id="common">0</span>
+                    / (<span class="badge rounded-pill text-bg-primary" id="side1">0</span> + <span class="badge rounded-pill text-bg-primary" id="side2">0</span>) 
+                    =
+                    <span class="badge rounded-pill text-bg-success" id="dice">0</span>
+                </div>
+                <div class="form-control" id="grid"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <div style="margin-top: 20px;" class="col-6">
+                    <div class="mb-3">
+                        <label for="target" class="form-label">Target dice score</label>
+                        <input type="number" class="form-control" id="target" aria-describedby="targetHelp" placeholder="0.86">
+                        <div id="targetHelp" class="form-text">Specify a target dice score you would like to reach.</div>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                    <div class="text-center" id="spinner">
+                        <div class="spinner-border text-warning" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="d-flex justify-content-center py-3">
+            <p>Click to mask, Shift-Click to detect</p>
+            <p>&copy; 2025 Dice score</p> 
+        </footer>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>
