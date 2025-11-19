@@ -10,6 +10,7 @@
 
 .cell.mask {
     border: 1px solid white;
+    border-radius: 6px;
     background-color: gray;
 }
 
@@ -21,7 +22,7 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    text-shadow: 0 0 4 white;
+    text-shadow: 0 0 3px black;
 }
 
 .cellrow {
