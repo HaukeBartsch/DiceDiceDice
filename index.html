@@ -17,7 +17,7 @@
             <div class="row">
                 <div style="margin-top: 20px; font-size: 24px;">
                     2 x <span class="badge rounded-pill text-bg-primary" id="common" title="number of overlapping tiles">0</span>
-                    / (<span class="badge rounded-pill text-bg-primary" id="side1" title="number of human masks">0</span> + <span class="badge rounded-pill text-bg-primary" id="side2" title="number of what would be AI tiles">0</span>) 
+                    / (<span class="badge rounded-pill text-bg-primary" id="side1" title="number of human mask tiles">0</span> + <span class="badge rounded-pill text-bg-primary" id="side2" title="number of AI mask tiles">0</span>) 
                     =
                     <span class="badge rounded-pill text-bg-success" id="dice" title="calculated dice score">0</span>
                 </div>
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col" id="grid"></div>
                 <div class="col-md-6">
-                    <p>Models for image segmentation learn by example. A target mask (dark tiles) comes from a human expert. Use your mouse to draw, left-mouse human mask, right-mouse AI mask.</p> 
+                    <p>Models for image segmentation learn by example. A target mask (dark tiles) comes from a human expert. Use your mouse to draw two masks, left-mouse human mask, right-mouse AI mask.</p> 
                     <p>A deep neural network learns by improving the overlap of its own estimated mask with the human generated mask.</p>
                     <p>At each learning step the overlap is improved. Here we measure the overlap using Dice's coefficient. A Dice score of 1 means a perfect match, at 0 we have a no overlap.</p>
                     <p>
@@ -44,7 +44,7 @@
                         <div class="mb-3">
                             <label for="target" class="form-label">Target dice score [0..1]</label>
                             <input type="number" class="form-control" id="target" aria-describedby="targetHelp" placeholder="0.86">
-                            <div id="targetHelp" class="form-text">Specify a target dice score you would like to reach (automation).</div>
+                            <div id="targetHelp" class="form-text">If you set a value here we will try to reach it.</div>
                         </div>
                     </div>
                 </div>
