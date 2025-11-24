@@ -87,7 +87,12 @@ jQuery(document).ready(function() {
         if (event.shiftKey) {
             jQuery(this).toggleClass('detected');
         } else {
-            jQuery(this).toggleClass('mask');
+            // based on the switch we can draw both now
+            if (jQuery('#switchDrawMode').is(':checked')) {
+                jQuery(this).toggleClass('detected'); 
+            } else {
+                jQuery(this).toggleClass('mask');
+            }
         }
         document.getSelection().removeAllRanges();
         event.preventDefault(); // prevent shift to have a select effect
@@ -109,5 +114,13 @@ jQuery(document).ready(function() {
         // recompute the dice coefficient
         computeDice();
         return false;
+    });
+
+    jQuery('#switchDrawMode').on('change', function() {
+        if (jQuery(this).is(':checked')) {
+            jQuery('#draw-mode-label').text('Draw detected (AI) mask');
+        } else {
+            jQuery('#draw-mode-label').text('Draw human mask');
+        }
     });
 })
